@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rancho&display=swap");
+
+:root {
+    --primary: #094b65;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    background: #fff;
+    min-height: 100vh;
+}
+
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 50px; /* Kurangi padding pada header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+#header .logo {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.5em; /* Kurangi ukuran font logo */
+    text-decoration: none;
+}
+
+#header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Hilangkan padding */
+    margin: 0; /* Hilangkan margin */
+}
+
+#header ul li {
+    list-style: none;
+    margin-left: 10px; /* Kurangi margin antar item */
+}
+
+#header ul li a {
+    text-decoration: none;
+    padding: 6px 10px; /* Kurangi padding pada link */
+    color: var(--primary);
+    border-radius: 20px;
+}
+
+#header ul li a:hover,
+#header ul li a.active {
+    background: var(--primary);
+    color: #fff;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #fff, transparent);
+    z-index: 1;
+}
+
+section img {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+section #text {
+    position: absolute;
+    color: var(--primary);
+    font-size: 10vw;
+    text-align: center;
+    line-height: 0.55em;
+    font-family: "Rancho", cursive;
+    transform: translatey(-50%);
+    width: 100%;
+}
+
+section #text span {
+    font-size: 0.2em;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+#btn {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    background: #fff;
+    color: var(--primary);
+    font-size: 1.2em;
+    border-radius: 40px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+#btn:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+.sec {
+    position: relative;
+    width: 100%;
+    padding: 100px 100px;
+    background: var(--primary);
+    color: #fff;
+}
+
+.sec h2 {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.sec p {
+    font-size: 1.1em;
+    font-weight: 300;
+    text-align: center;
+}
+
+.sec ul {
+    margin-top: 20px;
+    display: flex;
+}
+
+.sec ul li {
+    list-style: none;
+    margin-left: 50px;
+}
+
+.sec ul li p {
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+@media (max-width: 991px) {
+    #header {
+        padding: 10px 30px; /* Kurangi padding lebih jauh untuk layar kecil */
+    }
+
+    #header ul li {
+        margin-left: 5px; /* Kurangi margin lebih jauh untuk layar kecil */
+    }
+
+    #header ul li a {
+        padding: 5px 8px; /* Kurangi padding lebih jauh untuk layar kecil */
+    }
+
+    section {
+        padding: 0 50px;
+        text-align: center;
+    }
+
+    .sec {
+        padding: 100px 50px;
+    }
+
+    .sec ul {
+        flex-direction: column;
+    }
+
+    .sec ul li {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #header {
+        padding: 10px 20px; /* Kurangi padding lebih jauh untuk layar yang lebih kecil */
+    }
+
+    #header ul li {
+        margin-left: 3px; /* Kurangi margin lebih jauh untuk layar yang lebih kecil */
+    }
+
+    #header ul li a {
+        padding: 4px 6px; /* Kurangi padding lebih jauh untuk layar yang lebih kecil */
+    }
+
+    section {
+        padding: 0 20px;
+    }
+
+    .sec {
+        padding: 50px 20px;
+    }
+
+    .sec ul {
+        flex-direction: column;
+    }
+
+    .sec ul li {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
